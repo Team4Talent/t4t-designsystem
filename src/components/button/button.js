@@ -3,16 +3,31 @@ import PropTypes from 'prop-types';
 
 const Button = styled.button`
   padding: 0.375rem 0.75rem;
-  background-color: #007bff;
   border-radius: 0.25rem;
   border: 1px solid;
   color: white;
   font-family: inherit;
-  text-align: center;
-  vertical-align: middle;
   white-space: nowrap;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
+  font-size: ${props => {
+    switch (props.size) {
+      case 'x-large':
+        return '1.75rem';
+      case 'large':
+        return '1.5rem';
+      case 'small':
+        return '0.8rem';
+      case 'x-small':
+        return '0.7rem';
+      default:
+        return '1rem';
+    }
+  }};
   ${props => {
     switch (props.type) {
       case 'default':
@@ -126,10 +141,7 @@ const Button = styled.button`
               }
             `;
     }
-  }}
-
-  
-
+  }};
   ${props =>
     props.disabled &&
     css`
@@ -143,8 +155,7 @@ const Button = styled.button`
         background-color: #e3e7ed;
         border-color: #e3e7ed;
       }
-    `}
-
+    `};
   ${props =>
     props.disabled &&
     props.type === 'link' &&
@@ -157,23 +168,7 @@ const Button = styled.button`
       &:active {
         background-color: transparent;
       }
-    `}
-
-  /* ${props =>
-    props.outline &&
-    css`
-      background-color: white;
-      color: #007bff;
-
-      &:hover {
-        background-color: #f0f3ff;
-      }
-
-      &:active {
-        background-color: #dde5ff;
-      }
-    `} */
-
+    `};
   ${props =>
     props.outline &&
     props.disabled &&
@@ -187,22 +182,12 @@ const Button = styled.button`
       &:active {
         background-color: #edeff3;
       }
-    `}
+    `};
 
-  font-size: ${props => {
-    switch (props.size) {
-      case 'x-large':
-        return '1.75rem';
-      case 'large':
-        return '1.5rem';
-      case 'small':
-        return '0.8rem';
-      case 'x-small':
-        return '0.7rem';
-      default:
-        return '1rem';
-    }
-  }}
+  & > svg,
+  & > i {
+    padding-right: 0.375rem;
+  }
 `;
 
 Button.propTypes = {
