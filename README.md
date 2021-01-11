@@ -10,7 +10,7 @@ Components are authored using [react](https://reactjs.org) and styled using [sty
 ## Getting started
 
 After cloning this repository, run `npm install` to install to required dependencies.  
-Then run `npm start` (or `npm run storybook`) to launch Storybook in your browser on port 6006.
+Then run `npm run storybook` to launch Storybook in your browser on port 6006.
 
 You can now start developing components, Storybook will automatically reload whenever it detects file changes.
 
