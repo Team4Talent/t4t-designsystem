@@ -1,8 +1,7 @@
 {
-  "name": "T4T.DesignSystem",
-  "version": "1.0.0",
+  "name": "t4t-designsystem",
+  "version": "0.0.1",
   "description": "The Design System for T4T applications.",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
@@ -10,21 +9,27 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@ssh.dev.azure.com:v3/t4trocks/T4T.DesignSystem/T4T.DesignSystem"
+    "url": "https://t4trocks@dev.azure.com/t4trocks/T4T.DesignSystem/_git/t4t-designsystem"
   },
   "author": "Benjamin Todts",
   "dependencies": {
-    "react-icons": "^3.8.0",
-    "styled-components": "^5.0.0"
+    "react": "^16.0.1",
+    "react-dom": "^16.0.1",
+    "react-scripts": "^4.0.1",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.3",
-    "@storybook/addon-actions": "^5.3.4",
-    "@storybook/addon-links": "^5.3.4",
-    "@storybook/addon-knobs": "^5.3.4",
-    "@storybook/addon-storysource": "^5.3.4",
-    "@storybook/addons": "^5.3.4",
-    "@storybook/react": "^5.3.4",
-    "babel-loader": "^8.0.6"
+    "@babel/core": "^7.12.10",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/node-logger": "^6.1.11",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.11",
+    "babel-loader": "^8.2.2",
+    "webpack": "4.44.2"
+  },
+  "resolutions": {
+    "webpack": "4.44.2"
   }
 }
