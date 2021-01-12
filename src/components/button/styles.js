@@ -66,5 +66,5 @@ export const Link = tw(base)`
 
     ${(props) => sizes[props.size]}
 
-    ${(props) => (props.disabled ? 'opacity-50 cursor-not-allowed' : '')}
+    ${(props) => (props.disabled ? 'opacity-50 cursor-not-allowed bg-gray-300' : '')}
 `;

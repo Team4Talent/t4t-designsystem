@@ -23,7 +23,7 @@ Button.propTypes = {
    */
   type: PropTypes.oneOf(['primary', 'outline', 'link']),
   /**
-   * How large should the button be?
+   * Controls the size of the button
    */
   size: PropTypes.oneOf(['small', 'medium', 'large', 'x-large']),
   /**
