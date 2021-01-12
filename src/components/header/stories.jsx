@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { Header } from './';
+import { Header } from '.';
 
 export default {
   title: 'components/Header',

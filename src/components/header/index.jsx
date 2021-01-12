@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Code from '../../assets/code-brackets.svg';
 
-import { Button } from '../button/';
+import { Button } from '../button';
 import './header.css';
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
