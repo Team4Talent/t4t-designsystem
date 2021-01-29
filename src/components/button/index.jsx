@@ -1,21 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Primary, Outline, Link } from './styles';
+import { Button as WindmillButton } from '@windmill/react-ui';
 
 /**
- * Primary UI component for user interaction
+ * Component that triggers an action after user interaction
  */
-export const Button = ({ type, label, ...props }) => {
-  switch (type) {
-    case 'primary':
-    default:
-      return <Primary {...props}>{label}</Primary>;
-    case 'outline':
-      return <Outline {...props}>{label}</Outline>;
-    case 'link':
-      return <Link {...props}>{label}</Link>;
-  }
-};
+export const Button = ({label, type, ...props}) => 
+  <WindmillButton layout={type} {...props}>{label}</WindmillButton>
 
 Button.propTypes = {
   /**
@@ -25,7 +16,7 @@ Button.propTypes = {
   /**
    * Controls the size of the button
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'x-large']),
+  size: PropTypes.oneOf(['small', 'regular', 'large', 'larger']),
   /**
    * The text of the button.
    */
@@ -38,11 +29,28 @@ Button.propTypes = {
    * Optional click handler
    */
   onClick: PropTypes.func,
+  /*
+   * Displays an icon without text
+   */
+  icon: PropTypes.shape,
+  /*
+   * Display an icon on the left
+   */
+  iconLeft: PropTypes.shape,
+  /*
+   * Display an icon on the right
+   */
+  iconRight: PropTypes.shape,
+  /*
+   * Block buttons span the whole width of their parent
+   */
+  block: PropTypes.bool
 };
 
 Button.defaultProps = {
   type: 'primary',
-  size: 'medium',
+  size: 'regular',
   disabled: false,
-  onClick: undefined
+  onClick: undefined,
+  block: false
 };

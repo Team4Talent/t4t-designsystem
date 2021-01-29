@@ -1,24 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Wrapper } from './styles';
-
+import { Avatar as WindmillAvatar } from '@windmill/react-ui';
 
 /*
 * Displays a profile image.
 */
-export const Avatar = ({size, src, alt, ...props}) => {
-    return (
-    <Wrapper size={size} {...props}>
-      <img className="object-cover w-full h-full rounded-full" src={src} alt={alt} loading="lazy" />
-      <div className="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-    </Wrapper>);
-}
+export const Avatar = ({...props}) =>  
+  <WindmillAvatar {...props} />
 
 Avatar.propTypes = {
   /*
   * Controls the size of the avatar.
   */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small', 'regular', 'large']),
   /*
   * The source of the image to render.
   */
@@ -30,5 +24,5 @@ Avatar.propTypes = {
 }
 
 Avatar.defaultProps = {
-    size: 'medium'
+    size: 'regular'
 }
