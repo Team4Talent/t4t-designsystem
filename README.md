@@ -20,8 +20,8 @@ Storybook will work with the components found under `src/components`.
 
 Components must be placed in their own folder, with the following file structure:
 
-- `index.js`: the actual component logic
-- `stories.js`: stories (use cases) for this component
+- `index.jsx`: the actual component logic
+- `stories.jsx`: stories (use cases) for this component
 - `styles.js`: styles for this component
 
 ### Distribution
